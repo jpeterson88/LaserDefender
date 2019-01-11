@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4745705081552546}
   - component: {fileID: 212518545594313856}
   - component: {fileID: 114885261306434828}
+  - component: {fileID: 68338212834212430}
+  - component: {fileID: 114191551868302862}
   m_Layer: 0
   m_Name: Enemy Black 1
   m_TagString: Untagged
@@ -35,12 +37,57 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1018186782060648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.28, z: 0}
+  m_LocalPosition: {x: 1.22, y: -2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &68338212834212430
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1018186782060648}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.17808688, y: -0.3267386}
+  - {x: 0.16613424, y: -0.37679362}
+  - {x: 0.11657572, y: -0.4255092}
+  - {x: -0.002071619, y: -0.41396785}
+  - {x: -0.112131596, y: -0.42855525}
+  - {x: -0.17291617, y: -0.38197303}
+  - {x: -0.1792773, y: -0.31807256}
+  - {x: -0.28815895, y: -0.3129573}
+  - {x: -0.49205142, y: 0.42478824}
+  - {x: -0.32137704, y: 0.41661286}
+  - {x: -0.13205743, y: 0.30123687}
+  - {x: -0.12501109, y: 0.24984312}
+  - {x: -0.009740472, y: 0.29310346}
+  - {x: 0.1035831, y: 0.25354433}
+  - {x: 0.30371153, y: 0.42136312}
+  - {x: 0.4845811, y: 0.4176998}
+  - {x: 0.2702421, y: -0.32237935}
+  - {x: 0.1774813, y: -0.3219335}
+--- !u!114 &114191551868302862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1018186782060648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d843cd82c1f5b4f339196d2fc3c2a73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 200
 --- !u!114 &114885261306434828
 MonoBehaviour:
   m_ObjectHideFlags: 1
