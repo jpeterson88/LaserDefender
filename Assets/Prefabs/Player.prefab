@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4139518244497468}
   - component: {fileID: 212854357159111312}
   - component: {fileID: 114194595746697016}
-  m_Layer: 0
+  - component: {fileID: 60533799915932974}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,6 +42,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60533799915932974
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1653050020490412}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.99, y: 0.75}
+    newSize: {x: 0.99, y: 0.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.4647708, y: -0.1893549}
+      - {x: 0.495, y: 0.07965565}
+      - {x: 0.3783164, y: -0.0024776459}
+      - {x: 0.28275183, y: 0.0397501}
+      - {x: 0.24477094, y: 0.039503098}
+      - {x: 0.14007494, y: 0.12150669}
+      - {x: 0.125, y: 0.235}
+      - {x: 0.08461799, y: 0.375}
+      - {x: -0.0949236, y: 0.375}
+      - {x: -0.12988539, y: 0.09980869}
+      - {x: -0.25996178, y: 0.039809227}
+      - {x: -0.37196887, y: 0.0033798218}
+      - {x: -0.49499997, y: 0.095}
+      - {x: -0.47484714, y: -0.17927837}
+      - {x: -0.4597326, y: -0.26515293}
+      - {x: -0.399809, y: -0.23461819}
+      - {x: -0.35620826, y: -0.22681904}
+      - {x: -0.145, y: -0.295}
+      - {x: -0.095, y: -0.375}
+      - {x: 0.105, y: -0.375}
+      - {x: 0.14114164, y: -0.27572632}
+      - {x: 0.255, y: -0.24973202}
+      - {x: 0.3677528, y: -0.23291588}
+      - {x: 0.45499998, y: -0.265}
+      - {x: 0.4597326, y: -0.2550001}
 --- !u!114 &114194595746697016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -55,6 +105,11 @@ MonoBehaviour:
   moveSpeed: 10
   xPadding: 0.75
   yPadding: 0.7
+  health: 200
+  laserPrefab: {fileID: 1680877566305686, guid: e9614b80c8192486abea40a5ba41ee37,
+    type: 2}
+  projectileSpeed: 20
+  projectileFiringPeriod: 0.2
 --- !u!212 &212854357159111312
 SpriteRenderer:
   m_ObjectHideFlags: 1

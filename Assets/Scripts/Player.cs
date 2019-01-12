@@ -2,13 +2,16 @@
 using System.Collections;
 public class Player : MonoBehaviour
 {
+    [Header("Player")]
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float xPadding = 0f;
     [SerializeField] float yPadding = 0f;
+    [SerializeField] float health = 200f;
+
+    [Header("Projectile")]
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileFiringPeriod = 0.1f;
-    [SerializeField] float health = 100f;
 
     Coroutine firingCoroutine;
 
@@ -69,5 +72,29 @@ public class Player : MonoBehaviour
 
         yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + yPadding;
         yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - yPadding;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        DamageDealer damageDealer = other.GetComponent<DamageDealer>();
+        if (damageDealer != null)
+        {
+            ProcessHit(damageDealer);
+        }
+        else
+        {
+            Debug.Log("DamageDealer was null when OnTriggerEnter2D called on Player");
+        }
+    }
+
+    private void ProcessHit(DamageDealer damageDealer)
+    {
+        health -= damageDealer.GetDamage();
+        damageDealer.Hit();
+        Debug.Log("Owch that hurt. Health = " + health.ToString());
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

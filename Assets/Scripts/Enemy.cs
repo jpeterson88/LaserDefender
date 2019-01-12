@@ -46,17 +46,19 @@ public class Enemy : MonoBehaviour
         {
             ProcessHit(damageDealer);
         }
+        else
+        {
+            Debug.Log("DamageDealer was null when OnTriggerEnter2D called on Player");
+        }
     }
 
     private void ProcessHit(DamageDealer damageDealer)
     {
-        if (damageDealer.gameObject.name.StartsWith("Player"))
+        health -= damageDealer.GetDamage();
+        damageDealer.Hit();
+        if (health <= 0)
         {
-            health -= damageDealer.GetDamage();
-            if (health <= 0)
-            {
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
         }
     }
 }
