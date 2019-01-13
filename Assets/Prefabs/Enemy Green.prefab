@@ -75,7 +75,10 @@ MonoBehaviour:
   maxTimeBetweenShots: 3
   laserPrefab: {fileID: 1680877566305686, guid: df19cce6c7e3f44129b0467c51ddf9f4,
     type: 2}
+  explosionPrefab: {fileID: 1019542856990920, guid: 6dfae4fe91a2342ac824ea38ffdf734b,
+    type: 2}
   projectileSpeed: 10
+  durationOfExplosion: 1
 --- !u!114 &114885261306434828
 MonoBehaviour:
   m_ObjectHideFlags: 1
