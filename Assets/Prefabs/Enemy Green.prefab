@@ -70,15 +70,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  durationOfExplosion: 1
+  explosionPrefab: {fileID: 1019542856990920, guid: 6dfae4fe91a2342ac824ea38ffdf734b,
+    type: 2}
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
   laserPrefab: {fileID: 1680877566305686, guid: df19cce6c7e3f44129b0467c51ddf9f4,
     type: 2}
-  explosionPrefab: {fileID: 1019542856990920, guid: 6dfae4fe91a2342ac824ea38ffdf734b,
-    type: 2}
   projectileSpeed: 10
-  durationOfExplosion: 1
+  deathSound: {fileID: 8300000, guid: a46c79ecbe83c4d4da9a8014a2ffb1b3, type: 3}
+  deathSoundVolume: 0.2
+  shootSound: {fileID: 8300000, guid: 68c71ad38efed4a4eafee3bb9f2da26a, type: 3}
+  shootSoundVolume: 0.15
 --- !u!114 &114885261306434828
 MonoBehaviour:
   m_ObjectHideFlags: 1
