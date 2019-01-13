@@ -21,9 +21,7 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip shootSound;
     [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.5f;
 
-
     Coroutine firingCoroutine;
-
     float xMin;
     float xMax;
     float yMin;
