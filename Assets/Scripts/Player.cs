@@ -115,5 +115,7 @@ public class Player : MonoBehaviour
         var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(explosion, durationOfExplosion);
         AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
+
+        FindObjectOfType<Level>().LoadGameOver();
     }
 }
