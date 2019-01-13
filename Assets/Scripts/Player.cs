@@ -116,4 +116,10 @@ public class Player : MonoBehaviour
 
         FindObjectOfType<Level>().LoadGameOver();
     }
+
+    public float GetHealth()
+    {
+        return health;
+    }
+
 }

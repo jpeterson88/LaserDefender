@@ -114,6 +114,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1019542856990920, guid: 6dfae4fe91a2342ac824ea38ffdf734b,
     type: 2}
   shotCounter: 0
+  scoreValue: 150
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
   laserPrefab: {fileID: 1680877566305686, guid: 4dbe8b356b5884c31967ba258b41f3f0,
@@ -134,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f01bed256d9e4165b7a18a80b9e5253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 200
+  damage: 400
 --- !u!114 &114885261306434828
 MonoBehaviour:
   m_ObjectHideFlags: 1
