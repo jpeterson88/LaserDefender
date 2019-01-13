@@ -109,8 +109,8 @@ MonoBehaviour:
   durationOfExplosion: 1
   laserPrefab: {fileID: 1680877566305686, guid: e9614b80c8192486abea40a5ba41ee37,
     type: 2}
-  projectileSpeed: 20
-  projectileFiringPeriod: 0.2
+  laserSpeed: 10
+  laserFiringPeriod: 0.1
   explosionPrefab: {fileID: 1019542856990920, guid: d9b7487e2b323497b86f72850a433864,
     type: 2}
   deathSound: {fileID: 8300000, guid: 3d57ac499f8d24ebeb698b13fe130b9a, type: 3}
