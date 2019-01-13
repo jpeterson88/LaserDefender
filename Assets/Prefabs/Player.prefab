@@ -111,6 +111,8 @@ MonoBehaviour:
     type: 2}
   projectileSpeed: 20
   projectileFiringPeriod: 0.2
+  explosionPrefab: {fileID: 1019542856990920, guid: d9b7487e2b323497b86f72850a433864,
+    type: 2}
   deathSound: {fileID: 8300000, guid: 3d57ac499f8d24ebeb698b13fe130b9a, type: 3}
   deathSoundVolume: 1
   shootSound: {fileID: 8300000, guid: edfabab8329c049deb03bdfd683e8908, type: 3}

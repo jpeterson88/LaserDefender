@@ -2,17 +2,18 @@
 using System.Collections;
 public class Player : MonoBehaviour
 {
-    [Header("Player")]
+    [Header("Player Settings")]
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float xPadding = 0f;
     [SerializeField] float yPadding = 0f;
     [SerializeField] float health = 200f;
     [SerializeField] float durationOfExplosion = 1f;
 
-    [Header("Projectile")]
+    [Header("Projectiles")]
     [SerializeField] GameObject laserPrefab;
-    [SerializeField] float projectileSpeed = 10f;
-    [SerializeField] float projectileFiringPeriod = 0.1f;
+    [SerializeField] float laserSpeed = 10f;
+    [SerializeField] float laserFiringPeriod = 0.1f;
+    [SerializeField] GameObject explosionPrefab;
 
     [Header("Sounds")]
     [SerializeField] AudioClip deathSound;
@@ -67,9 +68,9 @@ public class Player : MonoBehaviour
         while (true)
         {
             GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
-            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
+            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, laserSpeed);
             AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position, shootSoundVolume);
-            yield return new WaitForSeconds(projectileFiringPeriod);
+            yield return new WaitForSeconds(laserFiringPeriod);
         }
     }
 
@@ -111,8 +112,8 @@ public class Player : MonoBehaviour
     {
         Destroy(gameObject);
 
-        // var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        // Destroy(explosion, durationOfExplosion);
+        var explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        Destroy(explosion, durationOfExplosion);
         AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
     }
 }
